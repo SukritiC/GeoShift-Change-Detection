@@ -24,7 +24,7 @@ By comparing “Before vs After” scenes, the system automatically highlights a
 The project demonstrates **remote sensing + machine learning + temporal analysis**, making it suitable for environmental monitoring & geospatial AI portfolios.
 
 ---
-Streamlit App Demo
+## Streamlit App Demo
 
 Below is the visual interface of the GeoShift app detecting landscape changes using uploaded satellite images:
 
@@ -34,6 +34,7 @@ Below is the visual interface of the GeoShift app detecting landscape changes us
   <img src="assets/ss2.png" alt="GeoShift Streamlit Change Heatmap" width="400"/>
   <img src="assets/ss3.png" alt="Before After Comparison" width="400"/>
 </p> 
+
 ---
 
 ## Key Features
