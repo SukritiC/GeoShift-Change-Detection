@@ -1,17 +1,25 @@
-# GeoShift Change Detection  
+# GeoShift Change Detection
 Satellite-Based Before vs After Change Detection using Geospatial ML
 
----
+![Status](https://img.shields.io/badge/Status-MVP_Prototype-blue?style=flat-square)
+![Tech](https://img.shields.io/badge/Built_With-Python_•_Streamlit_•_Rasterio_•_OpenCV-00C853?style=flat-square)
+![License](https://img.shields.io/badge/License-Apache_2.0-green?style=flat-square)
+
+<p align="center">
+
+  <img src="assets/asset1.jpg" alt="GeoShift Change Detection" width="800"/>
+</p>
+
 
 ## Overview
-GeoShift is an MVP system that detects and visualizes landscape changes using multi-temporal satellite imagery.  
+GeoShift is an MVP system that detects and visualizes landscape changes using multi-temporal satellite imagery.
 By comparing “Before vs After” scenes, the system automatically highlights areas that have undergone transformations such as:
 
-✔ Deforestation  
-✔ New constructions & roads  
-✔ Water body shrinkage  
-✔ Urban expansion  
-✔ Agricultural land-use shift  
+✔ Deforestation
+✔ New constructions & roads
+✔ Water body shrinkage
+✔ Urban expansion
+✔ Agricultural land-use shift
 
 The project demonstrates **remote sensing + machine learning + temporal analysis**, making it suitable for environmental monitoring & geospatial AI portfolios.
 
@@ -36,14 +44,14 @@ The project demonstrates **remote sensing + machine learning + temporal analysis
 - Threshold differences to create change mask
 - Overlay mask on original scene for visualization
 
-### Option B — **Siamese Change Detection Model (Advanced)**
+<!-- ### Option B — **Siamese Change Detection Model (Advanced)**
 ```
 Image T1 → CNN Encoder ─┐
 │→ Feature Difference → Upsampling Decoder → Change Mask
 Image T2 → CNN Encoder ─┘
 ```
-Loss Used: **Binary Cross Entropy + Dice**  
-Output: Pixel-level change classification heatmap  
+Loss Used: **Binary Cross Entropy + Dice**
+Output: Pixel-level change classification heatmap -->
 
 ---
 
@@ -63,39 +71,47 @@ Output: Pixel-level change classification heatmap
 ## Project Structure
 ```
 GeoShift-Change-Detection/
-│── data/ # input imagery + output masks
-│── notebooks/ # experimentation + visualization
+│── data/               # input imagery + output masks
 │── src/
-│ ├── preprocessor.py # image alignment + band extraction
-│ ├── differencer.py # NDVI/NBR change computation
-│ ├── model_siamese.py # deep learning architecture
-│ ├── inference.py # run change predictions on new AOIs
-│── results/ # heatmaps, overlays, reports
-│── app.py # optional Streamlit/FastAPI frontend
+│   ├── preprocessor.py       # image alignment + band extraction
+│   ├── differencer.py        # NDVI change computation
+│   ├── generate_mock_data.py # synthetic data generator
+│   ├── debug_ndvi.py         # debug script for NDVI values
+│   ├── test_differencer.py   # unit tests for differencer
+│── results/            # heatmaps, overlays, reports
+│── app.py              # Streamlit frontend
+│── requirements.txt    # dependencies
 │── README.md
 ```
 
 ---
 
 ## How to Run
-```
-git clone https://github.com/<username>/GeoShift-Change-Detection
+## How to Run
+```bash
+# 1. Clone the repository
+git clone https://github.com/SukritiC/GeoShift-Change-Detection.git
 cd GeoShift-Change-Detection
 
+# 2. Install dependencies
 pip install -r requirements.txt
-python src/differencer.py --t1 image_before.tif --t2 image_after.tif
+
+# 3. Generate mock data (Optional, for testing)
+python src/generate_mock_data.py
+
+# 4. Run the application
 streamlit run app.py
 ```
 
 ## License
 
-This documentation and conceptual content are distributed under the **MIT License**.  
+This documentation and conceptual content are distributed under the **Apache License**.
 See the [LICENSE](./LICENSE) file for more information.
 
 ---
-## Connect with Me  
+## Connect with Me
 
-I’m always open to connecting with **developers**, **AI enthusiasts**, and **innovators** working on **Generative AI projects**.  
+I’m always open to connecting with **developers**, **AI enthusiasts**, and **innovators** working on **Generative AI projects**.
 Let’s connect, collaborate, and create impact together!
 
 <p align="center">
@@ -116,7 +132,7 @@ Let’s connect, collaborate, and create impact together!
 ---
 
 <p align="center">
-  Let’s exchange ideas on <b>Generative AI</b> and build something extraordinary together. 🌍  
+  Let’s exchange ideas on <b>Generative AI</b> and build something extraordinary together. 🌍
 </p>
 
 ---
