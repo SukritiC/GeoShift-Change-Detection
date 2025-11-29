@@ -57,12 +57,10 @@ def create_mock_geotiff(filename, width=100, height=100, scenario="default"):
         size = 20
         # Growth in center: Red decreases, NIR increases
         data[
-            0, center_y - size : center_y + size, 
-            center_x - size : center_x + size
+            0, center_y - size : center_y + size, center_x - size : center_x + size
         ] = 50
         data[
-            3, center_y - size : center_y + size, 
-            center_x - size : center_x + size
+            3, center_y - size : center_y + size, center_x - size : center_x + size
         ] = 200
 
     elif scenario == "all_soil":
