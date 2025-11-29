@@ -1,17 +1,17 @@
-# GeoShift Change Detection  
+# GeoShift Change Detection
 Satellite-Based Before vs After Change Detection using Geospatial ML
 
 ---
 
 ## Overview
-GeoShift is an MVP system that detects and visualizes landscape changes using multi-temporal satellite imagery.  
+GeoShift is an MVP system that detects and visualizes landscape changes using multi-temporal satellite imagery.
 By comparing “Before vs After” scenes, the system automatically highlights areas that have undergone transformations such as:
 
-✔ Deforestation  
-✔ New constructions & roads  
-✔ Water body shrinkage  
-✔ Urban expansion  
-✔ Agricultural land-use shift  
+✔ Deforestation
+✔ New constructions & roads
+✔ Water body shrinkage
+✔ Urban expansion
+✔ Agricultural land-use shift
 
 The project demonstrates **remote sensing + machine learning + temporal analysis**, making it suitable for environmental monitoring & geospatial AI portfolios.
 
@@ -42,8 +42,8 @@ Image T1 → CNN Encoder ─┐
 │→ Feature Difference → Upsampling Decoder → Change Mask
 Image T2 → CNN Encoder ─┘
 ```
-Loss Used: **Binary Cross Entropy + Dice**  
-Output: Pixel-level change classification heatmap  
+Loss Used: **Binary Cross Entropy + Dice**
+Output: Pixel-level change classification heatmap
 
 ---
 
@@ -89,13 +89,13 @@ streamlit run app.py
 
 ## License
 
-This documentation and conceptual content are distributed under the **MIT License**.  
+This documentation and conceptual content are distributed under the **MIT License**.
 See the [LICENSE](./LICENSE) file for more information.
 
 ---
-## Connect with Me  
+## Connect with Me
 
-I’m always open to connecting with **developers**, **AI enthusiasts**, and **innovators** working on **Generative AI projects**.  
+I’m always open to connecting with **developers**, **AI enthusiasts**, and **innovators** working on **Generative AI projects**.
 Let’s connect, collaborate, and create impact together!
 
 <p align="center">
@@ -116,7 +116,7 @@ Let’s connect, collaborate, and create impact together!
 ---
 
 <p align="center">
-  Let’s exchange ideas on <b>Generative AI</b> and build something extraordinary together. 🌍  
+  Let’s exchange ideas on <b>Generative AI</b> and build something extraordinary together. 🌍
 </p>
 
 ---

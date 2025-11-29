@@ -1,7 +1,7 @@
 import rasterio
 from rasterio.enums import Resampling
 from rasterio.warp import reproject
-import numpy as np
+
 
 def load_image(filepath):
     """
@@ -12,6 +12,7 @@ def load_image(filepath):
         image = src.read()
         profile = src.profile
     return image, profile
+
 
 def align_images(src_path, ref_path, output_path):
     """
@@ -26,14 +27,16 @@ def align_images(src_path, ref_path, output_path):
         kwargs = ref.meta.copy()
 
     with rasterio.open(src_path) as src:
-        kwargs.update({
-            'crs': dst_crs,
-            'transform': dst_transform,
-            'width': dst_width,
-            'height': dst_height
-        })
+        kwargs.update(
+            {
+                "crs": dst_crs,
+                "transform": dst_transform,
+                "width": dst_width,
+                "height": dst_height,
+            }
+        )
 
-        with rasterio.open(output_path, 'w', **kwargs) as dst:
+        with rasterio.open(output_path, "w", **kwargs) as dst:
             for i in range(1, src.count + 1):
                 reproject(
                     source=rasterio.band(src, i),
@@ -42,6 +45,7 @@ def align_images(src_path, ref_path, output_path):
                     src_crs=src.crs,
                     dst_transform=dst_transform,
                     dst_crs=dst_crs,
-                    resampling=Resampling.nearest)
-    
+                    resampling=Resampling.nearest,
+                )
+
     return output_path
