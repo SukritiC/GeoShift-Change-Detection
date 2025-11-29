@@ -89,7 +89,7 @@ streamlit run app.py
 
 ## License
 
-This documentation and conceptual content are distributed under the **MIT License**.
+This documentation and conceptual content are distributed under the **Apache License**.
 See the [LICENSE](./LICENSE) file for more information.
 
 ---
