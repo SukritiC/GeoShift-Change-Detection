@@ -24,21 +24,33 @@ By comparing “Before vs After” scenes, the system automatically highlights a
 The project demonstrates **remote sensing + machine learning + temporal analysis**, making it suitable for environmental monitoring & geospatial AI portfolios.
 
 ---
+Streamlit App Demo
+
+Below is the visual interface of the GeoShift app detecting landscape changes using uploaded satellite images:
+
+<p align="center"> <img src="assets/ss1.png" alt="GeoShift Streamlit UI - Home" width="800"/> <br> <em>Home Screen — Upload Before/After imagery</em> </p>  
+
+<p align="center">
+  <img src="assets/ss2.png" alt="GeoShift Streamlit Change Heatmap" width="400"/>
+  <img src="assets/ss3.png" alt="Before After Comparison" width="400"/>
+</p> 
+---
 
 ## Key Features
+
 | Module | Capability |
 |-------|------------|
-| Data Acquisition | Download multi-date satellite images (Sentinel-2 / Landsat-8/9) |
-| Pre-processing | Cloud masking • Band selection • Raster alignment |
-| Change Detection Engine | NDVI differencing or Siamese CNN-based change mapping |
-| Visualization Layer | Heatmaps + Before/After overlays + Swipe comparison |
-| Output Metrics | % area changed, geospatial polygon extraction, GeoTIFF mask export |
+| Data Acquisition | Upload "Before" and "After" GeoTIFF images |
+| Pre-processing | Basic raster alignment (reprojection) |
+| Change Detection Engine | Spectral Change Detection (NDVI Differencing) |
+| Visualization Layer | Difference Heatmaps + Change Masks + Side-by-Side Comparison |
+| Output Metrics | % Area Changed, GeoTIFF Mask Export |
 
 ---
 
 ## Methodology
 
-### Option A — **Spectral Change Detection (MVP baseline)**
+### **Spectral Change Detection (MVP baseline)**
 - Compute NDVI/NDWI/NBR for both timestamps
 - Generate difference raster: `delta = im_after - im_before`
 - Threshold differences to create change mask
@@ -57,14 +69,15 @@ Output: Pixel-level change classification heatmap -->
 
 ## Tech Stack
 
+
 | Category | Tools |
 |---|---|
 | Language | Python |
-| Geospatial Processing | Rasterio, GDAL, GeoPandas, Shapely |
-| ML / DL | PyTorch / TensorFlow, Scikit-learn, OpenCV |
-| Data Source | Google Earth Engine, Sentinel Hub API |
-| Visualization | Folium/Leaflet, Matplotlib, Kepler.gl |
-| Deployment | FastAPI/Streamlit + Docker (optional) |
+| Geospatial Processing | Rasterio, NumPy |
+| ML / CV | OpenCV, Matplotlib |
+| Data Source | User Upload / Synthetic Mock Data |
+| Visualization | Streamlit |
+| Deployment | Local Streamlit Server |
 
 ---
 
@@ -86,7 +99,6 @@ GeoShift-Change-Detection/
 
 ---
 
-## How to Run
 ## How to Run
 ```bash
 # 1. Clone the repository
