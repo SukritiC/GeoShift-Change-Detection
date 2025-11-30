@@ -23,6 +23,8 @@ By comparing “Before vs After” scenes, the system automatically highlights a
 
 The project demonstrates **remote sensing + machine learning + temporal analysis**, making it suitable for environmental monitoring & geospatial AI portfolios.
 
+> 📚 [Read the full story on Medium](https://sukriti-speaks.medium.com/geoshift-automated-landscape-intelligence-from-space-aefe3099a9bb?postPublishedType=initial)
+
 ---
 ## Streamlit App Demo
 
@@ -135,7 +137,7 @@ Let’s connect, collaborate, and create impact together!
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40" alt="GitHub"/>
   </a>
    <a href="https://sukriti-speaks.medium.com/" target="_blank" style="margin-right: 15px;">
-    <img src="src/medium.png" width="40" height="40" alt="Medium"/>
+    <img src="assets/medium.png" width="40" height="40" alt="Medium"/>
   </a>
   <a href="https://x.com/SukritiSpeak" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png" width="40" height="40" alt="X (Twitter)"/>
