@@ -3,3 +3,4 @@ numpy
 matplotlib
 streamlit
 opencv-python
+requests
