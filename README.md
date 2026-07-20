@@ -7,7 +7,7 @@ Satellite-Based Before vs After Change Detection using Geospatial ML
 
 <p align="center">
 
-  <img src="assets/asset1.jpg" alt="GeoShift Change Detection" width="800"/>
+  <img src="assets/hero.jpg" alt="GeoShift Change Detection" width="800"/>
 </p>
 
 
